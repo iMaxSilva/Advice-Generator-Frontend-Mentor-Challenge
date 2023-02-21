@@ -1,6 +1,6 @@
 <h2 align="center">
   Desafio Frontend Mentor - Advice App<br/><br/>
-  <a href="https://maxsilva.netlify.app/" target="_blank">Clique aqui para entrar na pagina.</a>
+  <a href="https://frontendchallengerone.netlify.app/" target="_blank">Clique aqui para entrar na pagina.</a>
 </h2>
 <p align="center"><img src="https://i.imgur.com/UXZXIqf.png?maxwidth=760&fidelity=grand" alt="Image Preview"></img></p>
 <br/>
