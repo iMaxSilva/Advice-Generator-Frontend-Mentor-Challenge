@@ -8,10 +8,14 @@ export const Card = styled.div`
     transform: translate(0%, 100%);
     background-color: #313A49;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-width:500px) {
+        height: 300px;
+        width: 90vw;
+    }
 
    
 
@@ -29,11 +33,12 @@ export const Card = styled.div`
                 fill: #fff;
                 transition: all 0.8s;
             }
+
             box-shadow: 0px 0px 20px 5px #4BD898;
-            transition: all 0.8s;
-            
+            transition: all 0.8s;            
         }
     }
+
     hr {
         margin-bottom: 60px;
         width: 70%;
@@ -55,7 +60,6 @@ export const Content = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: fa;
         
         h1 {
             font-size: 0.965rem;
