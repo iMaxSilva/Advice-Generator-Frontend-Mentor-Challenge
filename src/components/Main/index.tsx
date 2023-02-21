@@ -24,20 +24,20 @@ export const Main = () => {
     const handleRefresh = () => {
        setRefresh(!refresh)
     }
-    
+
     return (
         <main>
             <Card>
-                <Content>
+                <Content aria-label="Content">
                     <div>
-                        <h1>ADVICE #{data?.id}</h1>
+                        <h1 aria-label="Title">ADVICE #{data?.id}</h1>
                     </div>
                     <div>
-                        <h2>{data?.advice}</h2>   
+                        <h2 aria-label="Advice">{data?.advice}</h2>   
                     </div>           
                 </Content>
                 <hr />
-                <button onClick={handleRefresh}><FaDice size={36}/></button>
+                <button onClick={handleRefresh} aria-label="Atualizar"><FaDice size={36}/></button>
             </Card>
         </main>
     )
