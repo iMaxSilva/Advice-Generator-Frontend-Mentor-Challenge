@@ -1,11 +1,18 @@
 import styled from 'styled-components';
 
+
+export const MainApp = styled.main`
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
 export const Card = styled.div`
     width: 500px;
     height: 300px;
     border-radius: 10px;
-    margin: auto;
-    transform: translate(0%, 100%);
     background-color: #313A49;
     display: flex;
     flex-direction: column;
@@ -21,12 +28,11 @@ export const Card = styled.div`
 
     button {
         background-color:#4BD898;
-        width: 60px;
-        height: 60px;
+        padding: 13px;
         border-radius: 100%;
         color: black;
-        position: absolute;
-        top: 90%;
+        position: relative;
+        top: 30px;
         
         :hover{
             svg {
@@ -40,7 +46,6 @@ export const Card = styled.div`
     }
 
     hr {
-        margin-bottom: 60px;
         width: 70%;
         border-color: #8d8f8e42;
     }
@@ -49,9 +54,9 @@ export const Card = styled.div`
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 300px;
     width: 80%;
 
     div {

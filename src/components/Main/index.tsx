@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {FaDice} from 'react-icons/fa'
+import { toast } from 'react-toastify';
 import api from '../../services/axios';
-import { Card, Content } from './styled';
+import { Card, Content, MainApp } from './styled';
 
 interface IData {
     id: number
@@ -15,8 +16,12 @@ export const Main = () => {
     
     useEffect(() => {
         const getData = async() => {
-            const response = await api.get('/advice');
-            setData(response.data.slip)
+            try{
+                const response = await api.get('/advice');
+                setData(response.data.slip)
+            }catch(err){
+                toast.error('Erro na aplicação.')
+            }            
         }
         getData();        
     }, [refresh])
@@ -26,7 +31,7 @@ export const Main = () => {
     }
 
     return (
-        <main>
+        <MainApp>
             <Card>
                 <Content aria-label="Content">
                     <div>
@@ -39,7 +44,7 @@ export const Main = () => {
                 <hr />
                 <button onClick={handleRefresh} aria-label="Atualizar"><FaDice size={36}/></button>
             </Card>
-        </main>
+        </MainApp>
     )
 }
 
