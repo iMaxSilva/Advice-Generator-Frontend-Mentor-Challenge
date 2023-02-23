@@ -46,6 +46,7 @@ export const Card = styled.div`
     }
 
     hr {
+        margin-top: 20px;
         width: 70%;
         border-color: #8d8f8e42;
     }
